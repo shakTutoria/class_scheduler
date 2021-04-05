@@ -2,6 +2,30 @@
 <html>
 <head>
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <style>
+    ol {
+      margin: 0em;
+    }
+    
+    li {
+        margin: 0em;
+        padding: 0.5em 0em;
+    }
+    li > p {
+        margin: 0em;
+        padding: 0em;
+    }
+    li > p > a {
+        margin: 0em;
+    }
+    p {
+      margin: 0em;
+      padding: 0.5em 0em;
+    }
+    .add-gap {
+      padding-top: 1em;
+    }
+</style>
 </head>
 <body>
 <%= image_tag attachments['logo.png'].url %>
@@ -33,9 +57,11 @@
       <b>Screening Interview:</b> To ensure a safe and productive environment for our clients and volunteers, 
       we ask that our volunteers undergo a brief screening interview by video. This interview requires no preparation. 
       Feel free to call, text, or email our Volunteer Support Team to schedule. Their contact details are below:
-    </p>
-    <a href="mailto:<%= ENV['SCREENING_EMAIL_ADDRESS'] %>"><%= ENV['SCREENING_EMAIL_ADDRESS'] %></a><br>
-    <a href="tel:<%= ENV['SCREENING_PHONE_NUMBER_ATTRIBUTE'] %>"><%= ENV['SCREENING_PHONE_NUMBER_DISPLAY'] %></a>
+      </p>
+      <p class="add-gap">
+        <a href="mailto:<%= ENV['SCREENING_EMAIL_ADDRESS'] %>"><%= ENV['SCREENING_EMAIL_ADDRESS'] %></a><br>
+        <a href="tel:<%= ENV['SCREENING_PHONE_NUMBER_ATTRIBUTE'] %>"><%= ENV['SCREENING_PHONE_NUMBER_DISPLAY'] %></a>
+      </p>
   </li>
   <li>
     <p>
