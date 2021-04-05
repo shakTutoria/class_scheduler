@@ -9,9 +9,9 @@ name: Ruby
 
 on:
   push:
-    branches: [ patch-1 ]
+    branches: [ patch-3 ]
   pull_request:
-    branches: [ patch-1 ]
+    branches: [ patch-3 ]
 
 jobs:
   test:
